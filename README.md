@@ -9,7 +9,7 @@ Open-source Codes: https://github.com/layumi/UAVM2023
 Baseline: https://github.com/layumi/University1652-Baseline/tree/master
 
 
-Candidates:
+## Candidates:
 
 1. https://github.com/Skyy93
 
@@ -23,14 +23,40 @@ Candidates:
 
 5. https://github.com/BingY998/UAVCompetition_WorkShop2023
 
-Useful Sources:
+## Useful Sources:
 
 1. https://github.com/NEU-Gou/awesome-reid-dataset
 2. https://github.com/cvg/Hierarchical-Localization
 3. awesome Geo-localization: https://github.com/layumi/University1652-Baseline/tree/master/State-of-the-art#cvusa-dataset
 
-Reproduce:
+## Experiments
 
-| Method | AP    | Recall@1 | Drone_acc | Satellite_acc | Test/Recall@1 | Test/Recall@5 |
-| ------ | ----- | -------- | --------- | ------------- | ------------- | ------------- | 
-| MLPN   | 95.38 | 95.46    | 97.57     | 97.57         | 92.14         | 96.11         | 
+| Method                    | Eval/Recall@1  | Test/Recall@1 |
+| ------------------------- | -------------  | ------------- |
+| MLPN                      | 95.46          | 92.14         |
+| CrossView                 | 88.89          | --            |
+| MLPN_clean (baseline)     | 94.66          | 92.26         |
+| MLPN_rerank               | 91.43          | --            |
+| MLPN_finetune_1           | 94.18          | 92.46         |
+| MLPN_finetune_2           | 95.34          | 93.40         |
+| MLPN_finetune_eval        | --             | 97.88         |
+
+MLPN_clean: train MLPN on the training dataset with noisy samples removed
+
+MLPN_finetune_1: adopt triplet loss to supervise the embedding.
+
+MLPN_finetune_2: adopt triplet loss to supervise the embedding, CE loss to supervise classifier.
+
+MLPN_finetune_eval: introduce extra evaluating dataset to train model, data leak warning.
+
+## Inspirations:
+
+1. Apply reranking: [Correlation Verification for Image Retrieva](https://openaccess.thecvf.com/content/CVPR2022/html/Lee_Correlation_Verification_for_Image_Retrieval_CVPR_2022_paper.html)
+
+2. Find regions of intrest: [TransGeo: Transformer Is All You Need for Cross-view Image Geo-localization](https://openaccess.thecvf.com/content/CVPR2022/html/Zhu_TransGeo_Transformer_Is_All_You_Need_for_Cross-View_Image_Geo-Localization_CVPR_2022_paper.html)
+
+3. Bag of tricks: 
+- [Efficient large-scale image retrieval with deep feature orthogonality and Hybrid-Swin-Transformers](https://arxiv.org/abs/2110.03786)
+- [2nd Place Solution to Google Landmark Retrieval 2021](https://arxiv.org/abs/2110.04294)
+
+ 
