@@ -1,4 +1,4 @@
-# Seven-Day Challenge
+# Glance-at-GeoLocalization
 
 Comepition Site: https://codalab.lisn.upsaclay.fr/competitions/12672#learn_the_details-overview
 
