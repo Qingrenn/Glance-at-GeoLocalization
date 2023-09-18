@@ -38,16 +38,18 @@ Baseline: https://github.com/layumi/University1652-Baseline/tree/master
 | MLPN_clean (baseline)     | 94.66          | 92.26         |
 | MLPN_rerank               | 91.43          | --            |
 | MLPN_finetune_1           | 94.18          | 92.46         |
-| MLPN_finetune_2           | 95.34          | 93.40         |
+| MLPN_finetune_2           | 95.79          | 93.56         |
 | MLPN_finetune_eval        | --             | 97.88         |
 
 MLPN_clean: train MLPN on the training dataset with noisy samples removed
 
-MLPN_finetune_1: adopt triplet loss to supervise the embedding.
+MLPN_finetune_1: adopt triplet loss to supervise the image embedding.
 
-MLPN_finetune_2: adopt triplet loss to supervise the embedding, CE loss to supervise classifier.
+MLPN_finetune_2: adopt triplet loss to supervise the image embedding, CE loss to supervise classifier.
 
 MLPN_finetune_eval: introduce extra evaluating dataset to train model, data leak warning.
+
+ <img src='./images/geoloc.png' width=60%>
 
 ## Inspirations:
 
