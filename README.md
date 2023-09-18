@@ -33,8 +33,8 @@ Baseline: https://github.com/layumi/University1652-Baseline/tree/master
 
 | Method                    | Eval/Recall@1  | Test/Recall@1 |
 | ------------------------- | -------------  | ------------- |
-| MLPN                      | 95.46          | 92.14         |
-| CrossView                 | 88.89          | --            |
+| [MLPN](https://github.com/Xenogenesis1/MLPN_workshop)                      | 95.46          | 92.14         |
+| [CrossView](https://github.com/mode-str/crossview)                 | 88.89          | --            |
 | MLPN_clean (baseline)     | 94.66          | 92.26         |
 | MLPN_rerank               | 91.43          | --            |
 | MLPN_finetune_1           | 94.18          | 92.46         |
